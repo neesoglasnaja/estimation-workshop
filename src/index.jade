@@ -1,0 +1,170 @@
+include ./blocks/slide.jade
+include ./blocks/cover.jade
+include ./blocks/quote.jade
+include ./blocks/frame.jade
+
+- var title = "Оценка фронтенда: перестаем&nbsp;тыкать пальцем в&nbsp;небо"
+
+doctype html
+html(lang='ru')
+  head
+    title !{title}
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="vendor/highlight.css")
+    link(rel='stylesheet', href='shower/themes/ribbon/styles/screen-16x10.css')
+    link(rel='stylesheet', href='theme.css')
+    link(rel='stylesheet', href='slides.css')
+  body.shower.list
+    header.caption
+      h1 !{title}
+    +slide({name: 'cover', header: title, classes:'cover'})
+      p Александра Шинкевич (
+        a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
+        | )
+      +cover('pictures/cover.jpg')
+    +slide({header: "Типы оценки", classes: "label-header"})
+      ul
+        li.next Предварительная
+          span.next  — высокоуровневая, где ничего не понятно
+          ul.next
+            li проекты, этапы работ
+        li.next Точная
+          span.next  — низкоуровневая, где все известно
+          ul.next
+            li конкретные задачи
+        li.next Переоценка
+          span.next  — изменились требования, поменялся разработчик
+          ul.next
+            li в процессе разработки
+      +cover('pictures/slides/0.jpg')
+    +slide({header: "Причины ошибок в оценках. Топ 5", classes: "label-header"})
+      ol
+        li.next Люди ошибаются
+        li.next Неточные требования или неизвестный набор задач
+        li.next Сложно оценить то, чего никогда не делал
+        li.next Не учитываются риски
+        li.next Производительность разработчиков может отличаться разы
+    +slide({header: "Этапы оценки", classes: "label-header"})
+      ul
+        li.next Подготовка
+        li.next Оценка
+        li.next Разработка
+        li.next Анализ
+      +cover('pictures/slides/2.jpg')
+    +slide({header: "<span class='label'>Подготовка</span>", shout: true, classes: 'cover'})
+      +cover('pictures/preparations.jpg')
+    +slide({header: "Подготовка", classes: "label-header"})
+      ul
+        li.next Составьте детальный структурированный список задач
+        li.next Изучите макеты и ТЗ с описанием
+        li.next Если уже есть вопросы - задавайте их
+    +slide({header: "<span class='label'>Оценка</span>", shout: true, classes: 'cover'})
+      +cover('pictures/whatever.jpg')
+    +slide({header: "Оценка", classes: "label-header"})
+      ul
+        li.next Задавайте вопросы
+          ul
+            li.next Если ответы получить нельзя, ставьте условия сами
+            li.next Пример: валидация формы -> валидация
+              br
+              |  на ненулевые начения всех полей формы + email
+        li.next Декомпозируйте задачи
+          ul
+            li.next Вплоть до технологий или отдельных функций
+        li.next Учитывайте риски
+      +cover('pictures/slides/3.jpg')
+    +slide({header: "<span class='label'>Схема</span>", shout: true, classes: 'cover'})
+    +slide({})
+      +cover('pictures/scheme/1.jpg')
+    +slide({})
+      +cover('pictures/scheme/2.jpg')
+    +slide({})
+      +cover('pictures/scheme/3.jpg')
+    +slide({})
+      +cover('pictures/scheme/4.jpg')
+    +slide({})
+      +cover('pictures/scheme/5.jpg')
+    +slide({})
+      +cover('pictures/scheme/6.jpg')
+    +slide({})
+      +cover('pictures/scheme/7.jpg')
+    +slide({})
+      +cover('pictures/scheme/8.jpg')
+    +slide({})
+      +cover('pictures/scheme/9.jpg')
+    +slide({})
+      +cover('pictures/scheme/10.jpg')
+    +slide({header: "<span class='label'>Разработка</span>", shout: true, classes: 'cover'})
+      +cover('pictures/develop.jpg')
+    +slide({header: "Разработка", classes: "label-header"})
+      ul
+        li.next Логируйте время
+          ul
+            li.next Будьте честными
+            li.next Используйте программы-помощники
+        li.next Делайте переоценки
+          ul
+            li.next Напоминайте менеджерам, что задачи должны быть оценены
+            li.next Да, даже самые маленькие
+      +cover('pictures/slides/4.jpg')
+    +slide({header: "<span class='label'>Анализ</span>", shout: true, classes: 'cover'})
+    +slide({header: "Анализ", classes: "label-header"})
+      ul
+        li.next Анализируйте оцененное и реально затраченное время
+          ul
+            li.next Смотрите на свои цифры сами
+        li.next Учитывайте коэффициент погрешности оценок
+      +cover('pictures/slides/5.jpg')
+    +slide({header: "Коэффициент погрешности оценок", classes: "label-header"})
+      table.formula
+        tr
+          th(rowspan="2") k =
+          td затраченное
+        tr
+          td оцененное
+      +cover('pictures/slides/6.jpg')
+    +slide({header: "<span class='label'>Задачи &times; Время &ne; Дедлайн</span>", shout: true, classes: 'cover'})
+      +cover('pictures/blur-cover.jpg')
+      +cover('pictures/slides/7.jpg')
+    +slide({header: "Задание 1", classes: ""})
+      +cover('pictures/Login-Form-Material.jpg')
+    +slide({header: "Задание 2", classes: "label-header"})
+      p Известно: надо сделать попап формы регистрации
+    +slide({header: "", classes: ""})
+      +cover('pictures/slider.png')
+    +slide({header: "Хочу больше", classes: "label-header"})
+      ul.smaller
+        li
+          a(href="https://lovata.com/blog/guide-to-time-estimation-project-estimation-techniques-tips-tricks.html", target="_blank") Guide to Time Estimation: Project Estimation Techniques, Tips & Tricks
+          |  (EN)
+        li
+          a(href="https://habrahabr.ru/company/ruswizards/blog/151029/" target="_blank") Реальная оценка или почему наступают дедлайны
+          |  (Хабр) 
+        li
+          a(href="https://dou.ua/lenta/articles/ob-otsenke-vremeni/" target="_blank") Некоторые правила улучшения временнóй оценки задачи
+          |  (статья) 
+        li
+          a(href="https://www.slideshare.net/VLDCORP/ss-10635744" target="_blank") Оценки имеют значение
+          |  (SlideShare) 
+        li
+          a(href="https://www.slideshare.net/ExigenServices/ss-26460568" target="_blank") Оценка задач, выполняемых по итеративной разработке
+          |  (SlideShare) 
+        li
+          a(href="https://habrahabr.ru/post/308494/" target="_blank") Как дать адекватную оценку времени, когда неопределённость бьёт по башке
+          |  (Хабр) 
+        li
+          a(href="https://youtu.be/XUqiMEh2PMc", target="_blank") Метод определения сроков выполнения проекта по Бобуку-Бацеку
+          |  (Youtube)
+        li
+          a(href="https://youtu.be/GIPFLIoeKkg", target="_blank") Тупняк как чума 21 века и что с этим делать, Максим Дорофеев
+          |  (Youtube)
+      +cover('pictures/slides/8.jpg')
+    +slide({header: "Слайды", classes: 'label-header'})
+      p
+        a(href='https://neesoglasnaja.github.io/estimation-workshop' target="_blank") https://neesoglasnaja.github.io/estimation-workshop
+      +cover('pictures/blur-cover.jpg')
+    
+    .progress
+    script(src='shower/shower.min.js')

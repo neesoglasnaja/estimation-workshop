@@ -1,0 +1,73 @@
+@import 'D:\Git\MinskCSS#3\node_modules\stylus\lib\functions';
+.smaller {
+  font-size: 0.85em;
+}
+.smallest {
+  font-size: 0.55em;
+}
+iframe {
+  border: 1px solid #aaa;
+}
+#cover:after {
+  opacity: 0;
+}
+#cover h2 {
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  font-size: 48px;
+  display: inline-block;
+  max-width: 70%;
+}
+#cover p {
+  margin: 280px 0 0;
+  text-align: left;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0.75;
+}
+#cover p a {
+  color: #fff;
+}
+.cover img {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+.cover h2 {
+  color: #fff;
+}
+.img-full {
+  text-align: center;
+}
+.img-full img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: -25%;
+}
+.end-link {
+  bottom: 10%;
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #aaa;
+}
+.end-link a {
+  color: #fff;
+}
+.bigger {
+  font-size: 53px;
+}
+.logo {
+  width: 150px;
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 90px;
+}
+.logo + .logo {
+  margin-left: 50px;
+}
